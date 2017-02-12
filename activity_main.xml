@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.carbuyingcalculations.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+               >
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:ems="6"
+                android:text="Car 1" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textSize="24sp"
+                android:ems="6"
+                android:text="Car 2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/purchaseprice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Purchase price £"
+                android:textSize="14sp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:id="@+id/purchaseprice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Purchase price £"
+                android:textSize="14sp"
+                android:layout_marginLeft="16dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-12dp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/mpg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:hint="Miles per gallon"
+                android:textSize="14sp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:id="@+id/mpg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Miles per gallon"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/petrol1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Petrol cost (£ per litre)"
+                android:textSize="14sp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:id="@+id/petrol2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Petrol cost (£ per litre)"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/mileage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Mileage"
+                android:ems="10"
+                android:textSize="14sp"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:id="@+id/mileage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Mileage"
+                android:layout_marginLeft="16dp"
+                android:ems="10"
+                android:textSize="14sp"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        >
+            <Button
+            android:id="@+id/calculatebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:onClick="displayCalculation"
+            android:text="CALCULATE"/>
+
+        <Button
+            android:id="@+id/resetbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="76dp"
+            android:onClick="ResetValues"
+            android:text="RESET"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:text="RESULTS"
+            />
+        <TextView
+            android:id="@+id/car1text"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:text="Value of car 1 = "
+            />
+
+        <TextView
+            android:id="@+id/car2text"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:text="Value of car 2 = "
+            />
+
+        <TextView
+            android:id="@+id/resultstext"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:text="Which car to buy: " />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
